@@ -38,7 +38,7 @@ app.post("/adddata", (req, res)=> {
     if(username&&content){
     Data.findOne({ username: username}, (err, data) => {
         if(data){
-            res.send({message: "Username Already exists"})       
+            res.send({message: "Keyword Already exists"})       
         } else {
             const data = new Data({
                 username,
