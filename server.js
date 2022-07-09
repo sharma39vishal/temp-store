@@ -33,12 +33,40 @@ app.post("/getdata", (req, res)=> {
 }) 
 
 
+
 app.post("/adddata", (req, res)=> {
     const {username,content} = req.body
     if(username&&content){
-    Data.findOne({ username: username}, (err, data) => {
-        if(data){
+    Data.findOne({ username: username}, (err, ans) => {
+        if(ans){
+            // console.log(Date.now()-(ans.time - '0'));
+            if(Date.now()-(ans.time - '0')>=100000000){
+                const data = new Data({
+                    username,
+                    content,
+                    time:Date.now()
+                })
+                // console.log(data.content);
+                // console.log(ans._id);
+                Data.deleteOne({username:username}, (err,result)=>{
+                    if (err) {
+                      res.send(err);
+                    } else {
+                    //   res.json(result);
+                    }
+                });
+
+                 data.save(err => {
+                     if(err) {
+                         res.send(err)
+                     } else {
+                         res.send( { message: "Successfully Content Was Uploaded" })
+                     }
+                })
+            }
+            else{
             res.send({message: "Keyword Already exists"})       
+            }
         } else {
             const data = new Data({
                 username,
