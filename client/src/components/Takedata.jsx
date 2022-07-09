@@ -36,7 +36,7 @@ export default class Takedata extends Component {
   render() {
     return (
       <div style={{paddingBottom:"8%"}}>
-        <h1 className='my-4' style={{fontSize:"40px",fontFamily:"Pinyon Script"}}>Store Text into keyword</h1>
+        <h1 className='my-4' style={{fontSize:"40px",fontFamily:"Pinyon Script"}}>store Text into keyword</h1>
     <div className="mb-3" style={{paddingRight:"29%",paddingLeft:"29% "}}>
   <label htmlFor="exampleFormControlInput1" className="form-label">Unique Keyword</label>
   <input type="email" className="form-control" id="exampleFormControlInput1" onChange={this.handleChange2} value={this.state.value2}  placeholder="example : vishal789456"/>
