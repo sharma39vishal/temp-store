@@ -21,14 +21,14 @@ Generally if we want to send some text we have to send it by whatsapp , messager
 
 1. Home Page
 
-[!Home](img/home.png)
+![Home](img/home.png)
 
 2. Key and Text Input Page
 
-[!texttokey](img/textintokey.png)
-[!texttokey1](img/textintokey2.png)
+![texttokey](img/textintokey.png)
+![texttokey1](img/textintokey2.png)
 
 3. Key to Text Conversion Page
 
-[!keytotext](img/keywordintotext.png)
-[!keytotext1](img/keywordintotext2.png)
+![keytotext](img/keywordintotext.png)
+![keytotext1](img/keywordintotext2.png)
